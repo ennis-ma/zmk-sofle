@@ -45,9 +45,9 @@
         tap-ms = <30>;
     };
 
-    new_behavior: new_behavior {
+    layer: layer {
         compatible = "zmk,behavior-hold-tap";
-        label = "NEW_BEHAVIOR";
+        label = "LAYER";
         bindings = <&mo>, <&kp>;
 
         #binding-cells = <2>;
@@ -59,16 +59,32 @@
         hold-trigger-on-release;
     };
 
+    macros {
+        perplexity: perplexity {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp P>;
+            label = "PERPLEXITY";
+        };
+
+        raycast: raycast {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp SPACE>;
+            label = "RAYCAST";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         Colemak {
             bindings = <
-&kp ESC     &kp N1    &kp N2     &kp N3    &kp N4  &kp N5       &kp UP_ARROW     &kp N6   &kp N7    &kp N8     &kp N9           &kp N0      &kp BACKSPACE
-&kp TAB     &kp Q     &kp W      &kp F     &kp P   &kp B        &kp DOWN_ARROW   &kp J    &kp L     &kp U      &kp Y            &kp SEMI    &kp C_PLAY_PAUSE
-&kp CAPS    &kp A     &kp R      &kp S     &kp T   &kp G        &kp LEFT_ARROW   &kp M    &kp N     &kp E      &kp I            &kp O       &kp C_NEXT
-&kp LSHFT   &kp Z     &kp X      &kp C     &kp D   &kp V        &kp RIGHT_ARROW  &kp K    &kp H     &kp COMMA  &kp DOT          &kp FSLH    &kp C_AC_BACK
-&kp C_MUTE  &kp LALT  &kp LCTRL  &kp LGUI  &mo 0   &kp SPACE    &kp RET          &kp RET  &kp BSPC  &mo 0      &kp RIGHT_SHIFT  &kp DELETE
+&kp ESC     &kp N1    &kp N2     &kp N3    &kp N4           &kp N5       &kp UP_ARROW     &kp N6   &kp N7    &kp N8     &kp N9           &kp N0       &raycast
+&kp TAB     &kp Q     &kp W      &kp F     &kp P            &kp B        &kp DOWN_ARROW   &kp J    &kp L     &kp U      &kp Y            &kp SEMI     &kp C_PLAY_PAUSE
+&kp CAPS    &kp A     &kp R      &kp S     &kp T            &kp G        &kp LEFT_ARROW   &kp M    &kp N     &kp E      &kp I            &kp O        &kp C_NEXT
+&kp LSHFT   &kp Z     &kp X      &kp C     &kp D            &kp V        &kp RIGHT_ARROW  &kp K    &kp H     &kp COMMA  &kp DOT          &kp FSLH     &kp C_AC_BACK
+&kp C_MUTE  &kp LALT  &kp LCTRL  &kp LGUI  &layer 2 ESCAPE  &kp SPACE    &kp RET          &kp RET  &kp BSPC  &mo 3      &kp RIGHT_SHIFT  &perplexity
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
