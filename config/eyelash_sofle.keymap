@@ -4,6 +4,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 /*
@@ -62,7 +64,14 @@
         perplexity: perplexity {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT &kp LEFT_COMMAND &kp P>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_SHIFT &kp LEFT_COMMAND>,
+                <&macro_tap>,
+                <&kp P>,
+                <&macro_release>,
+                <&kp LEFT_SHIFT &kp LEFT_COMMAND>;
+
             label = "PERPLEXITY";
         };
 
@@ -112,11 +121,11 @@
 
         fn {
             bindings = <
-&bt BT_CLR    &kp F1  &kp F2           &kp F3           &kp F4           &kp F5             &trans  &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &trans
-&bt BT_SEL 0  &trans  &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_ON   &rgb_ug RGB_EFF    &trans  &trans  &trans  &trans  &kp F11  &kp F12  &trans
-&bt BT_SEL 1  &trans  &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFR    &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&bt BT_SEL 2  &trans  &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans   &trans   &trans
-&trans        &trans  &trans           &trans           &trans           &trans             &trans  &trans  &trans  &trans  &trans   &trans
+&bt BT_CLR    &kp F1     &kp F2           &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6  &kp F7  &kp F8  &kp F9   &kp F10  &trans
+&bt BT_SEL 0  &mkp RCLK  &rgb_ug RGB_OFF  &rgb_ug RGB_BRI  &rgb_ug RGB_ON   &rgb_ug RGB_EFF    &mmv MOVE_DOWN   &trans  &trans  &trans  &kp F11  &kp F12  &trans
+&bt BT_SEL 1  &trans     &rgb_ug RGB_HUD  &rgb_ug RGB_BRD  &rgb_ug RGB_HUI  &rgb_ug RGB_EFR    &mmv MOVE_LEFT   &trans  &trans  &trans  &trans   &trans   &trans
+&bt BT_SEL 2  &trans     &trans           &trans           &trans           &trans             &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans   &trans   &trans
+&trans        &trans     &trans           &trans           &trans           &trans             &mkp LCLK        &trans  &trans  &trans  &trans   &trans
             >;
 
             label = "fn";
