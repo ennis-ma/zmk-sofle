@@ -25,7 +25,7 @@ layers:
   - I
   - U
   - {t: ;, s: ':'}
-  - {t: \, s: '|'}
+  - PLAY PAUSE
   - $$mdi:apple-keyboard-caps$$
   - A
   - R
@@ -38,7 +38,7 @@ layers:
   - E
   - I
   - O
-  - .
+  - $$mdi:skip-next$$
   - $$mdi:apple-keyboard-shift$$
   - Z
   - X
@@ -51,7 +51,7 @@ layers:
   - {t: ',', s: <}
   - {t: ., s: '>'}
   - {t: /, s: '?'}
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - AC BACK
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
