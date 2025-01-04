@@ -136,7 +136,7 @@
 &trans  &trans         &trans       &trans        &trans        &trans           &trans  &trans         &trans        &trans        &trans        &trans        &trans
 &trans  &trans         &trans       &trans        &trans        &trans           &trans  &trans         &trans        &trans        &trans        &trans        &trans
 &trans  &kp LS(UNDER)  &kp LS(DQT)  &kp LS(LPAR)  &kp LS(RPAR)  &kp EQUAL        &trans  &kp LS(TILDE)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)  &trans        &to 1
-&trans  &trans         &kp SEMI     &kp LBKT      &kp RBKT      &kp LS(COLON)    &trans  &kp COMMA      &kp DOT       &kp BSLH      &kp MINUS     &kp LS(PLUS)  &trans
+&trans  &kp GRAVE      &kp SEMI     &kp LBKT      &kp RBKT      &kp LS(COLON)    &trans  &kp COMMA      &kp DOT       &kp BSLH      &kp MINUS     &kp LS(PLUS)  &trans
 &trans  &trans         &trans       &trans        &trans        &trans           &trans  &trans         &trans        &trans        &trans        &trans
             >;
         };
