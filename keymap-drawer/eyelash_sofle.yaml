@@ -55,14 +55,14 @@ layers:
   - $$mdi:volume-off$$
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-control$$
-  - LGUI
-  - {t: '$$mdi:keyboard-esc$$', h: fn}
+  - fn
+  - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$'}
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - symbol
-  - $$mdi:apple-keyboard-shift$$
+  - {t: '$$mdi:backspace$$', h: symbol}
+  - '&superkey'
+  - '&screenshot'
   - '&perplexity'
   qwerty:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -121,7 +121,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: colemak, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -185,8 +185,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
@@ -222,16 +222,16 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+ _
-  - Sft+ "
-  - Sft+ (
-  - Sft+ )
+  - Sft+_
+  - Sft+"
+  - Sft+(
+  - Sft+)
   - {t: '=', s: +}
   - {t: '$$mdi:transfer$$', type: trans}
-  - Sft+ ~
-  - Sft+ {
-  - Sft+ }
-  - Sft+ |
+  - Sft+~
+  - Sft+{
+  - Sft+}
+  - Sft+|
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: qwerty, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -239,14 +239,13 @@ layers:
   - {t: ;, s: ':'}
   - {t: '[', s: '{'}
   - {t: ']', s: '}'}
-  - 'Sft+ :'
+  - 'Sft+:'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '''', s: '"'}
   - {t: ., s: '>'}
   - {t: \, s: '|'}
   - {t: '-', s: _}
-  - Sft+ +
-  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft++
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -257,5 +256,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
