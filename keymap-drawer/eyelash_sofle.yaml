@@ -27,7 +27,7 @@ layers:
   - Y
   - {t: ;, s: ':'}
   - PLAY PAUSE
-  - $$mdi:apple-keyboard-caps$$
+  - $$mdi:apple-keyboard-control$$
   - A
   - R
   - S
